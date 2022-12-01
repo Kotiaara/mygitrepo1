@@ -1,5 +1,3 @@
-names: Python Hello World
-
 on:
   push:
     branches: [ main ]
