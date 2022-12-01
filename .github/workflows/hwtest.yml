@@ -5,7 +5,11 @@ on:
     branches: [ main ]
 
 jobs:
+  build:
+
+    runs-on: ubuntu-latest
 
     steps:
-    - name: Build
+    - uses: actions/chekout@v3
+    - name: Build with pytest
       run: python3 main2.py
