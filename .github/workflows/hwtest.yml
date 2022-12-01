@@ -8,6 +8,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/chekout@v3
+    - uses: actions/chekout@v2
     - name: Build with pytest
       run: python3 main2.py
