@@ -6,8 +6,6 @@ on:
 
 jobs:
 
-    runs-on: ubuntu-latest
-
     steps:
       - name: Build
         run: python3 main2.py
