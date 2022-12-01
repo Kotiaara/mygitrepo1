@@ -8,6 +8,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/chekout@v1
+    - uses: Kotiaara/mygitrepo1
     - name: Build with pytest
       run: python3 main2.py
