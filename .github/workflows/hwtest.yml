@@ -3,11 +3,18 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
-
+  run_tests:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: Kotiaara/mygitrepo1
-    - name: Build with pytest
+    - uses: actions/checkout@main
+
+    - uses: actions/setup-python@v1
+      with:
+        python-version: '3.8'
+        architecture: 'x64'
+    - name: Install requirements
+      run: pip install -r requirements.txt
+
+    - name: Run tests
       run: python3 main2.py
