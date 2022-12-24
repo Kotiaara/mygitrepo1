@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY . /app
 
-RUN pip instal -r requirements.txt
+RUN pip install -r requirements.txt
 
 ENV FLASK_DEBUG=True
 
