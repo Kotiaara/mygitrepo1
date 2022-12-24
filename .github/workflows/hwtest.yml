@@ -8,14 +8,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@main
+    - uses: actions/checkout@v3
 
-    - uses: actions/setup-python@v1
+    - uses: actions/setup-python@v3
       with:
         python-version: '3.8'
         architecture: 'x64'
     - name: Install requirements
       run: pip install -r requirements.txt
 
-    - name: Run tests
-      run: python3 main2.py
+    - name: Build the docker image
+      run: docker build -t kotiaara/py .
+
+    - name: Conteiner
+      run: docker run -d kotiaara/py    
+
+#    - name: Run tests
+#      run: python3 main2.py
