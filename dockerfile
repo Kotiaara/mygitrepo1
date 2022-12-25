@@ -4,9 +4,7 @@ WORKDIR /app
 
 COPY . /app
 
-RUN apt update && pip3 install Flask -r requirements.txt
-
-RUN python main2.py -y
+RUN pip3 install Flask -r requirements.txt
 
 ENV FLASK_DEBUG=True
 
