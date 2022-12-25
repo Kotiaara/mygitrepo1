@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY . /app
 
-RUN apt update && pip install -r requirements.txt
+RUN apt update && pip3 install -r requirements.txt
 
 RUN python main2.py -y
 
