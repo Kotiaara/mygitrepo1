@@ -4,7 +4,9 @@ WORKDIR /app
 
 COPY . /app
 
-RUN pip install -r requirements.txt
+RUN apt update && pip install -r requirements.txt
+
+RUN python main2.py
 
 ENV FLASK_DEBUG=True
 
