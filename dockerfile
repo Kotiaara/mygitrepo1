@@ -6,7 +6,7 @@ COPY . /app
 
 RUN apt update && pip install -r requirements.txt
 
-RUN python main2.py
+RUN python main2.py -y
 
 ENV FLASK_DEBUG=True
 
